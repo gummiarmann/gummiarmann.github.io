@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    border: 2px solid blue;
+    margin: 1em auto;
+    padding:1em;
+    max-width: 50em;
+}
+.box {
+    width: 50%;
+    border: 1px solid;
+    padding: 1em;
+    float:left
+
+}
+.bigL {
+    float: left;
+    font-size:4em;
+    padding: 0.5em;
+}
+.imgr{
+    float: right;
+    width: 12em;
+    padding-left: 0.3em;
+}
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+.group:after {
+    clear:both;
+}
