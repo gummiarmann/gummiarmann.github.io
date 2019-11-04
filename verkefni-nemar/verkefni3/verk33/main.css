@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+.body {
+    max-width: 60em;
+    margin:1em auto;
+    border: 3px solid blue;
+}
+.main {
+    grid-area: main;
+}
+/*~~ GRID AREA ~~*/
+.haus {
+    grid-area: haus;
+    text-align: center;
+    background-color: royalblue;
+}
+.topnav {
+    grid-area: topnav;
+}
+.topnav a {
+    color: #F502F5;
+}
+.content {
+    grid-area: content;
+}
+.foot {
+    grid-area: foot;
+    }
+/*~~ Dálkar í main ~~*/
+.as1 {
+    grid-area: as1;
+}
+.as2 {
+    grid-area: as2;
+}
+.art1 {
+    grid-area: art1;
+    font-family: 'Almarai', sans-serif;
+}
+/*~~ Template area ~~*/
+.body {
+    display: grid;
+    grid-gap:0;
+    grid-template-areas: 
+        'topnav'
+        'haus'
+        'main'
+        'foot'
+
+}
+.main {
+    display: grid;
+    grid-gap:0;
+    grid-template-areas:
+        'art1 as1'
+        'art1 as2';
+    grid-template-columns: 2fr 1fr;
+}
+/*~~ flex box ~~*/
+.topmenu , .footmenu {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin:0;
+    padding:5px;
+    background-color: black;
+    }
+.topmenu li, .footmenu {
+    list-style-type: none;
+}
+/* vinnugögn */
+.haus, .main, .art1, .as1, .as2 {
+    border: 2px solid yellow;
+} 
+.as1, .as2, .art1 {
+    background-color: deeppink;
+    padding: 1em;
+}
+.as1, .as2 {
+    font-family: 'Vibes', cursive;
+}

@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+.body {
+    max-width: 60em;
+    margin:1em auto;
+    border: 1px solid blue
+}
+.main {
+    grid-area: main;
+}
+/*~~ GRID AREA ~~*/
+.haus {
+    grid-area: haus;
+}
+.topnav {
+    grid-area: topnav;
+}
+.content {
+    grid-area: content;
+}
+.foot {
+    grid-area: foot;
+    }
+/*~~ Dálkar í main ~~*/
+.as1 {
+    grid-area: as1;
+}
+.as2 {
+    grid-area: as2;
+}
+.art1 {
+    grid-area: art1;
+}
+/*~~ Template area ~~*/
+.body {
+    display: grid;
+    grid-gap:0;
+    grid-template-areas: 
+        'topnav'
+        'haus'
+        'main'
+        'foot'
+
+}
+.main {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+        'as1 art1 as2';
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 0 2em;
+}
+/*~~ flex box ~~*/
+.topmenu , .footmenu {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin:0;
+    padding:1em 0;
+    background-color: #ddd;
+}
+.topmenu li, .footmenu {
+    list-style-type: none;
+}
+/* vinnugögn */
+.haus, .main, .art1, .as1, .as2 {
+    border:1px dotted blue;
+} 

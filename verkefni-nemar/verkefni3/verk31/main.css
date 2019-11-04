@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+.body {
+    max-width: 60em;
+    margin:1em auto;
+    border: solid rgb(47, 0, 255);
+    background-color: rgb(60, 148, 136)
+
+}
+.main {
+    grid-area: main;
+}
+/*~~ GRID AREA ~~*/
+.haus {
+    grid-area: haus;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
+.topnav {
+    grid-area: topnav;
+    border: 2px solid rgb(111, 0, 255);
+}
+.topnav a {
+    color: #F502F5;
+}
+.content {
+    grid-area: content;
+}
+.foot {
+    grid-area: foot;
+    border: 2px solid rgb(111, 0, 255);
+    }
+/*~~ Dálkar í main ~~*/
+.as1 {
+    grid-area: as1;
+    font-family: 'Permanent Marker', cursive;
+}
+.as2 {
+    grid-area: as2;
+    font-family: 'Permanent Marker', cursive;
+}
+.art1 {
+    grid-area: art1;
+    font-family: 'Dancing Script', cursive;
+}
+.as1, .as2 {
+    text-align: center;
+}
+/*~~ Template area ~~*/
+.body {
+    display: grid;
+    grid-gap:0 3px;
+    grid-template-areas: 
+        'topnav'
+        'haus'
+        'main'
+        'foot'
+
+}
+.main {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+        'art1 as1'
+        'art1 as2';
+    grid-template-columns: 2fr 1fr;
+    padding:0;
+}
+/*~~ flex box ~~*/
+.topmenu , .footmenu {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin:0;
+    padding:1em 0;
+}
+.topmenu li, .footmenu {
+    list-style-type: none;
+}
+/*~~ vinnugögn ~~*/
+.as1, .as2, .art1 {
+   border: 2px solid rgb(17, 0, 255); 
+} 
