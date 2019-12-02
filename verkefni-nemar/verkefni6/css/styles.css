@@ -316,5 +316,5 @@ Viðmið - breakpoints 80em = 1280px +
   body {
     max-width: 80em;
     margin: 0 auto;
-  }
+    }
   }
